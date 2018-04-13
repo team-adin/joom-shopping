@@ -1,0 +1,16 @@
+<nav>
+  <h2>{{site_name}}</h2>
+  <div *ngIf="isAuthenticated()">
+    <a routerLink="add" routerLinkActive="active">Add item</a>
+    <a routerLink="show">Show items</a>
+    <a (click)="logout()" routerLink="logout">Logout</a>
+  </div>
+  <div *ngIf="!isAuthenticated()">
+    <a routerLink="registration">Registration</a>
+    <a (click)="login()" routerLink="login">Login</a>
+  </div>
+</nav>
+
+<div>
+  <router-outlet id="router"></router-outlet>
+</div>
