@@ -2,6 +2,20 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1>`,
+  templateUrl: './app.component.html',
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent  {
+  authenticated = true;
+  site_name = 'Team-ADIN';
+  isAuthenticated() {
+    return this.authenticated;
+  }
+
+  login() {
+    this.authenticated = true;
+  }
+
+  logout() {
+    this.authenticated = false;
+  }
+}
