@@ -9,10 +9,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class ShopItem {
 
     @Id
-    private String id;
-    private String name;
-    private Double price;
+    private String itemId;
+    private String itemName;
+    private String price;
     private String size;
     private String color;
-    private Boolean discount100;
+    private String discount100;
 }
