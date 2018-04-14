@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: "joom-adin/joom-app"
+    links:
+     - database
+    ports:
+     - "80:8090"
+  database:
+    image: "mysql:latest"
+    ports:
+     - "3388:3306"
