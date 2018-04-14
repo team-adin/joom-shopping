@@ -9,6 +9,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class UserInfo {
 
     @Id
-    private String id;
-    private String name;
+    private String userId;
+    private String userName;
 }

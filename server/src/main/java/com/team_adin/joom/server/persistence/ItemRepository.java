@@ -9,5 +9,7 @@ import java.util.List;
 @Repository
 public interface ItemRepository extends MongoRepository<ShopItem, String> {
 
-    List<ShopItem> findAllByDiscount100();
+    List<ShopItem> findAllByDiscount100(String discount100);
+
+    ShopItem findByItemId(String itemId);
 }
