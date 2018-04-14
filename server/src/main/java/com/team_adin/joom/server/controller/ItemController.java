@@ -1,8 +1,7 @@
 package com.team_adin.joom.server.controller;
 
-import com.team_adin.joom.server.model.Item;
-import com.team_adin.joom.server.service.itemservice.ItemService;
-import org.springframework.http.ResponseEntity;
+import com.team_adin.joom.server.model.ShopItem;
+import com.team_adin.joom.server.persistence.ItemRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,25 +10,21 @@ import java.util.List;
 @RequestMapping(value = "/api/items")
 public class ItemController {
 
-    private ItemService itemService;
+    private ItemRepository itemRepository;
 
-    ItemController(ItemService itemService) {
-        this.itemService = itemService;
+    ItemController(ItemRepository itemRepository) {
+        this.itemRepository = itemRepository;
     }
 
-    @GetMapping()
+    @GetMapping(value = "/all")
     @ResponseBody
-//    public Iterable<Item> getItems() {
-//        return this.itemService.getItems();
-//    }
-    public String getItems() {
-        return "RESULT IS HERE!";
+    public List<ShopItem> getItems() {
+        return this.itemRepository.findAll();
     }
 
-    @PostMapping()
-    public String add(@RequestBody Item item) {
-        Item litem = itemService.addItem(item);
-
-        return (litem != null) ? "Saved" : "Error";
+    @GetMapping(value = "/discounts")
+    @ResponseBody
+    public List<ShopItem> getItemsDiscount() {
+        return this.itemRepository.findAllByDiscount100();
     }
 }

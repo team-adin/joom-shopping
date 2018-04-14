@@ -1,7 +1,7 @@
 <nav>
   <h2>{{site_name}}</h2>
   <div *ngIf="isAuthenticated()">
-    <a routerLink="add" routerLinkActive="active">Add item</a>
+    <a routerLink="add" routerLinkActive="active">Add shopItem</a>
     <a routerLink="show">Show items</a>
     <a (click)="logout()" routerLink="logout">Logout</a>
   </div>

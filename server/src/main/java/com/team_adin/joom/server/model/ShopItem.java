@@ -1,19 +1,18 @@
 package com.team_adin.joom.server.model;
 
 import lombok.Data;
-import org.hibernate.annotations.Entity;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+@Document(collection = "items")
 @Data
-public class Item {
+public class ShopItem {
 
     @Id
     private String id;
     private String name;
     private Double price;
-    private Integer color;
-    private Integer size;
+    private String size;
+    private String color;
     private Boolean discount100;
-
 }
