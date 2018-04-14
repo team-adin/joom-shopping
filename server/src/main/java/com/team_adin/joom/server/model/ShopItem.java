@@ -4,11 +4,11 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "users")
+@Document(collection = "items")
 @Data
-public class UserInfo {
+public class ShopItem {
 
     @Id
-    private Integer id;
+    private String id;
     private String name;
 }
