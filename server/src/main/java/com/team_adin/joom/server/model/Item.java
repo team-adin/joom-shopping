@@ -10,6 +10,10 @@ public class Item {
 
     @Id
     private String id;
-    private String reference;
+    private String name;
+    private Double price;
+    private Integer color;
+    private Integer size;
+    private Boolean discount100;
 
 }

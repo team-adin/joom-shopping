@@ -9,12 +9,10 @@ import javax.persistence.GenerationType;
 
 @Entity
 @Data
-public class UserAuth {
+public class UserInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-
-    private String login;
-    private String pwd;
+    private String name;
 }
