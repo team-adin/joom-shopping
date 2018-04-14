@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: "rogeenok/joom-shopping"
+    links:
+     - database
+    ports:
+     - "80:8090"
+  database:
+    image: "mongo:latest"
+    ports:
+     - "27017:27017"

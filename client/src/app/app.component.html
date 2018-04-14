@@ -1,0 +1,18 @@
+<div class="nav">
+  <div class="nav_site-name">
+    {{site_name}}
+  </div>
+  <div class="nav_tabs" *ngIf="isAuthenticated()">
+    <a routerLink="add" routerLinkActive="active">Add item</a>
+    <a routerLink="show">Show items</a>
+    <a (click)="logout()" routerLink="">Logout</a>
+  </div>
+  <div class="nav_tabs" *ngIf="!isAuthenticated()">
+    <a routerLink="registration">Registration</a>
+    <a (click)="login()" routerLink="add">Login</a>
+  </div>
+</div>
+
+<div class="router">
+  <router-outlet id="router"></router-outlet>
+</div>
