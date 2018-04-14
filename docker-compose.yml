@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: "joom-adin/joom-app"
+    links:
+     - database:mysql
+    ports:
+     - "80:8090"
+  database:
+    image: "mysql:latest"
+    environment:
+      MYSQL_ROOT_PASSWORD: user_pwd
+      MYSQL_DATABASE: test_db
+      MYSQL_USER: username
+      MYSQL_PASSWORD: test_pwd
+    ports:
+     - "3306:3306"
