@@ -11,4 +11,8 @@ public class ShopItem {
     @Id
     private String id;
     private String name;
+    private Double price;
+    private String size;
+    private String color;
+    private Boolean discount100;
 }
