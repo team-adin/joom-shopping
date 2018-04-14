@@ -1,0 +1,29 @@
+html {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 12px;
+}
+
+div {
+  background-color: #336699;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  background-color: #0b1638;
+}
+
+  .nav_site-name {
+    width: 30%;
+    background-color: #ff0000;
+    font-size: 30px;
+  }
+
+  .nav_tabs {
+    width: 30%;
+    background-color: #00ff00;
+  }
+
+.router {
+  background-color: #0000ff;
+}
