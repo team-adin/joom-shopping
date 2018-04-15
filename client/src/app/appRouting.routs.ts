@@ -16,5 +16,5 @@ export const routes: Routes = [
     path: 'show', component: ShowComponent
   },
   { path: 'list', component: ListComponent},
-  // { path: '', redirectTo: 'list', pathMatch: 'full'}
+  { path: '', redirectTo: 'list', pathMatch: 'full'}
 ];

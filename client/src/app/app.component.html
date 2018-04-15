@@ -12,10 +12,14 @@
       <nav>
         <a routerLink="list" routerLinkActive="active" *ngIf="isAuthenticated()">Акция-100</a>
         <a routerLink="show" routerLinkActive="" *ngIf="isAuthenticated()">Мои предпочтения</a>
-        <a routerLink="register" routerLinkActive="active" *ngIf="!isAuthenticated()">{{sign_up}}</a>
+        <a routerLink="register" routerLinkActive="" *ngIf="!isAuthenticated()">{{sign_up}}</a>
         <a (click)="login()" *ngIf="!isAuthenticated()">{{sign_in}}</a>
         <a (click)="logout()" *ngIf="isAuthenticated()">Выход</a>
       </nav>
     </div>
   </div>
 </header>
+
+<div>
+  <router-outlet></router-outlet>
+</div>

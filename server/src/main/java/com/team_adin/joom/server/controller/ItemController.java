@@ -2,6 +2,7 @@ package com.team_adin.joom.server.controller;
 
 import com.team_adin.joom.server.model.ShopItem;
 import com.team_adin.joom.server.persistence.ItemRepository;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,8 +21,10 @@ public class ItemController {
 
     @GetMapping(value = "/all")
     @ResponseBody
-    public List<ShopItem> getItems() {
-        return this.itemRepository.findAll();
+    public ResponseEntity<?> getItems() {
+        HttpHeaders headers = new HttpHeaders();
+        headers.set("Access-Control-Allow-Origin","*");
+        return new ResponseEntity<>(this.itemRepository.findAll(), headers, HttpStatus.OK);
     }
 
     @GetMapping(value = "/discounts")

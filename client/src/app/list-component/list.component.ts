@@ -1,6 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {ShopItem} from "../data/shop-item";
 import {HttpService} from "../service/http-service.service";
+import {AppComponent} from "../app.component";
 
 @Component({
   selector: 'list',
@@ -16,11 +17,7 @@ export class ListComponent implements OnInit {
   constructor(private http: HttpService) {}
 
   ngOnInit() {
-    this.http.getItems(this.url + this.urlAll).subscribe(items => this.items = items);
-  }
-
-  submit() {
-
+    this.http.getItems(AppComponent.globalUrl + this.url + this.urlAll).subscribe(data => this.items = data);
   }
 
 }

@@ -8,14 +8,16 @@ import {LoginComponent} from "./login-component/login.component";
 import {ShowComponent} from "./show-component/show.component";
 import {RegistrationComponent} from "./registration-component/registration .component";
 import {ListComponent} from "./list-component/list.component";
-import {HttpModule} from "@angular/http";
 import {HttpService} from "./service/http-service.service";
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   imports:      [
     BrowserModule,
     RouterModule.forRoot(routes),
-    HttpModule,
+    HttpClientModule,
+    FormsModule
   ],
   declarations: [
     AppComponent,
