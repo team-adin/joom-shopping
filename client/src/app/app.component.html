@@ -1,18 +1,21 @@
-<div class="nav">
-  <div class="nav_site-name">
-    {{site_name}}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<header class="clearfix">
+  <div class="container">
+    <div class="header-left">
+      <h3>JOOM: Shopping Service</h3>
+    </div>
+    <div class="header-right">
+      <!--<label for="open">-->
+        <!--<span class="hidden-desktop"></span>-->
+      <!--</label>-->
+      <!--<input type="checkbox" name="" id="open">-->
+      <nav>
+        <a routerLink="list" routerLinkActive="active" *ngIf="isAuthenticated()">Акция-100</a>
+        <a routerLink="show" routerLinkActive="" *ngIf="isAuthenticated()">Мои предпочтения</a>
+        <a routerLink="register" routerLinkActive="active" *ngIf="!isAuthenticated()">{{sign_up}}</a>
+        <a (click)="login()" *ngIf="!isAuthenticated()">{{sign_in}}</a>
+        <a (click)="logout()" *ngIf="isAuthenticated()">Выход</a>
+      </nav>
+    </div>
   </div>
-  <div class="nav_tabs" *ngIf="isAuthenticated()">
-    <a routerLink="add" routerLinkActive="active">Add item</a>
-    <a routerLink="show">Show items</a>
-    <a (click)="logout()" routerLink="">Logout</a>
-  </div>
-  <div class="nav_tabs" *ngIf="!isAuthenticated()">
-    <a routerLink="registration">Registration</a>
-    <a (click)="login()" routerLink="add">Login</a>
-  </div>
-</div>
-
-<div class="router">
-  <router-outlet id="router"></router-outlet>
-</div>
+</header>

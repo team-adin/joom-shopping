@@ -1,9 +1,8 @@
-import {Color} from "./color";
-import {Size} from "./size";
-
 export class ShopItem {
-  id: string;
-  title: string;
-  colors: Color[];
-  sizes: Size[];
+  itemId: string;
+  itemName: string;
+  price: string;
+  color: string;
+  size: string;
+  discount100: string;
 }

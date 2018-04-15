@@ -1,4 +1,5 @@
 import {Component, OnInit} from "@angular/core";
+import {ShopItem} from "../data/shop-item";
 
 @Component({
   selector: 'list',
@@ -6,6 +7,9 @@ import {Component, OnInit} from "@angular/core";
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+
+  items: ShopItem[] = [];
+
   ngOnInit() {
   }
 

@@ -1,29 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  -webkit-box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+}
+
+.clearfix {
+  *zoom: 1;
+  width: 98%;
+  margin: auto;
+}
+
 html {
   font-family: Helvetica, arial, sans-serif;
   font-size: 12px;
 }
 
-div {
-  background-color: #336699;
+.container {
+  width: 80%;
+  margin: 0 auto;
 }
 
-.nav {
-  display: flex;
+header {
   width: 100%;
-  background-color: #0b1638;
+  height: auto;
+  background: #268721;
 }
 
-  .nav_site-name {
-    width: 30%;
-    background-color: #ff0000;
-    font-size: 30px;
-  }
+.header-left,
+.header-right {
+  position: relative;
+  color: white;
+  float: left;
+}
 
-  .nav_tabs {
-    width: 30%;
-    background-color: #00ff00;
-  }
+.header-left {
+  width: 50%;
+}
 
-.router {
-  background-color: #0000ff;
+.header-right label {
+  position: absolute;
+  /*top: -3.7em;*/
+  right: 0;
+  cursor: pointer;
+}
+
+/*.header-right span {*/
+  /*position: relative;*/
+  /*width: 2em;*/
+  /*height: 2em;*/
+  /*background: rgba(255, 255, 255, .3);*/
+  /*-webkit-transition: all .3s ease;*/
+/*}*/
+
+.header-right span:hover {
+  background: rgba(255, 255, 255, .6);
+}
+
+.header-right span:before,
+.header-right span:after {
+  content: '';
+  position: absolute;
+  width: 2em;
+  height: .5em;
+  top: 4px;
+  left: 0;
+  background: black;
+}
+
+.header-right span:after {
+  top: 14px;
+}
+
+.header-right {
+  width: 50%;
+  text-align: right;
+}
+
+#open {
+  display: none;
+}
+
+h3 {
+  font-weight: 300;
+  line-height: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+nav > a, .main-menu-item {
+  position: relative;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 40px;
+  padding: 0 2em;
+  -webkit-transition: all .3s ease;
+}
+
+nav > a:hover, .main-menu-item:hover, nav > li:hover {
+  background: rgba(194, 200, 37, 0.9);
+  color: black;
+  text-decoration: none;
+}
+
+.main-menu-item:hover .link {
+  color: cyan;
+  text-decoration: none;
+}
+
+.hidden-desktop {
+  display: none;
+}
+
+a:focus {
+  text-decoration: none;
 }

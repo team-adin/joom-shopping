@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   authenticated = false;
-  site_name = 'Team-ADIN';
+  sign_in = 'Вход';
+  sign_up = 'Регистрация';
   isAuthenticated() {
     return this.authenticated;
   }
