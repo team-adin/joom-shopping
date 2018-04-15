@@ -1,0 +1,17 @@
+.square {
+  width: 70%;
+  margin: auto;
+  counter-reset: li;
+  list-style: none;
+  background: #E8E8E8;
+  padding: 10px;
+}
+
+.square ul {
+  position: relative;
+  margin: 0 0 10px 2em;
+  padding: 4px 8px;
+  border-top: 2px solid #787A77;
+  transition: .3s linear;
+  background: lightgreen;
+}

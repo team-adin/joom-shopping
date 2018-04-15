@@ -1,7 +1,14 @@
-<div>
-  <a>BLAAAAAA</a>
-  <div *ngFor="let data of items">
-    <a>{{data.itemId}}</a>
-  </div>
-  <a>{{items.length}}</a>
+<div class="row component-row">
+  <ol class="square">
+    <ul *ngFor="let data of items">
+      <div>
+        <label>Наименование</label>: {{data.itemName}}
+        <label>Цена</label>: {{data.price}} р.
+      </div>
+      <div><label>Цвет</label>: {{data.color}}</div>
+      <div *ngIf="data.size != '-'"><label>Размер</label>: {{data.size}}</div>
+      <input *ngIf="data.discount100 == 'true'"
+        type="submit" class="btn btn-primary" value="Групповая покупка" (click)="submit(data.itemId)">
+    </ul>
+  </ol>
 </div>
