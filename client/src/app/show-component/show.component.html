@@ -1,3 +1,10 @@
-<div>
-  <a>show</a>
+<div class="subscribes">
+  <div class="subscribe" *ngFor="let data of subscribes">
+    <a>{{data.shopItemName}}</a>
+    <a>{{data.subscribe.id}}</a>
+    <a>{{data.subscribe.shopItemId}}</a>
+    <a>{{data.subscribe.userInfoId}}</a>
+    <a>{{data.subscribe.date}}</a>
+    <a>{{data.subscribe.count}}</a>
+  </div>
 </div>
